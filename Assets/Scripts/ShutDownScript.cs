@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TestScript : MonoBehaviour {
+public class ShutDownScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +12,7 @@ public class TestScript : MonoBehaviour {
 	
 	}
 
-	public void printStuff(string caller){
-		print ("button works");
+	public void Shutdown(){
+		this.gameObject.SetActive(false);
 	}
 }
