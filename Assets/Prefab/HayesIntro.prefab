@@ -14,7 +14,7 @@ GameObject:
   - 114: {fileID: 11477118}
   - 114: {fileID: 11474124}
   m_Layer: 5
-  m_Name: Welcome
+  m_Name: HayesIntro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -171,7 +171,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Beginning
+  m_Text: Hayes
 --- !u!114 &11432790
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .823529422, g: .115051918, b: .115051918, a: 1}
+    m_HighlightedColor: {r: .307878047, g: .078503482, b: .889705896, a: 1}
     m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
     m_DisabledColor: {r: .757352948, g: .211613342, b: .211613342, a: .501960814}
     m_ColorMultiplier: 1
@@ -219,7 +219,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: concl
+          m_StringArgument: desk
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11474124}
@@ -266,7 +266,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yes
+  m_Text: Let us keep this professional
 --- !u!114 &11443574
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -305,8 +305,10 @@ MonoBehaviour:
     have three powerful DO3-class antenna. They can give us detailed information of
     each vessel. However, using these consumes a large amount of energy. Even if we
     can draw this energy directly from the national root lines, it is of limited supply.
-    \n\nPersonally, I have to say I very much look forward to working with you, Sir.\n
-    \nA permission to speak directly? "
+    \n\nPersonally, I have to say I very much look forward to working with you, Sir.
+    It is great to have you back from your assignment. I would be tempted to ask more,
+    but naturally I understand that its nature is strictly confidential. Again, I
+    am honored to be working with you."
 --- !u!114 &11459506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -415,7 +417,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: No
+  m_Text: Thank you, Hayes
 --- !u!114 &11484044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -457,7 +459,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: .200462341, g: .963235319, b: .0991565585, a: 1}
+    m_HighlightedColor: {r: .0642301142, g: .7639153, b: .79411763, a: 1}
     m_PressedColor: {r: .784313738, g: .784313738, b: .784313738, a: 1}
     m_DisabledColor: {r: .784313738, g: .784313738, b: .784313738, a: .501960814}
     m_ColorMultiplier: 1
@@ -484,7 +486,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: firstObs
+          m_StringArgument: desk
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11474124}
@@ -568,8 +570,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -34, y: -142}
-  m_SizeDelta: {x: 170, y: 30}
+  m_AnchoredPosition: {x: -19, y: -142}
+  m_SizeDelta: {x: 201, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22408484
 RectTransform:

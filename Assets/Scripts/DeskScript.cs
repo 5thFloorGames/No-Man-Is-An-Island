@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class DeskScript : MonoBehaviour {
 
 	public List<Button> buttons;
+	public List<GameObject> activatableOnThreat;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,12 @@ public class DeskScript : MonoBehaviour {
 	public void TurnButtonsOff(){
 		foreach(Button b in buttons){
 			b.interactable = false;
+		}
+	}
+
+	public void SetButtonsActive(){
+		foreach(GameObject g in activatableOnThreat){
+			g.SetActive(true);
 		}
 	}
 
