@@ -6,7 +6,8 @@ public class ResourcesScript : MonoBehaviour {
 	private int radars = 5;
 	private int weapons = 5;
 	private int sanityLevel = 0;
-
+	private Threat threat;	
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -17,6 +18,38 @@ public class ResourcesScript : MonoBehaviour {
 	
 	}
 
+	public void CreateThreat(){
+		threat = ScriptableObject.CreateInstance<Threat> ();
+		threat.setup (2, 1, false);
+		print(threat.ToString ());
+	}
+
+	public void reactRadar(int amount){
+		print(useRadars (amount));
+	}
+
+	public bool useRadars(int amount){
+		reduceRadars (amount);
+		if (threat.getRadarValue() <= amount) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public void reactWeapon(int amount){
+		print(useWeapons (amount));
+	}
+	
+	public bool useWeapons(int amount){
+		reduceWeapons (amount);
+		if (threat.getWeaponValue() <= amount) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
 	public int getRadars(){
 		return radars;
 	}

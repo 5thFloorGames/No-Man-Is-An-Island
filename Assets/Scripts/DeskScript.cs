@@ -30,6 +30,12 @@ public class DeskScript : MonoBehaviour {
 		}
 	}
 
+	public void HideThreatButtons(){
+		foreach(GameObject g in activatableOnThreat){
+			g.SetActive(false);
+		}
+	}
+
 	public void SetButtonsActive(){
 		foreach(GameObject g in activatableOnThreat){
 			g.SetActive(true);

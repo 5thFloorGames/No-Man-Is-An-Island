@@ -17,4 +17,13 @@ public class Threat : ScriptableObject {
 	public override string ToString(){
 		return ("Radar: " + radarValue + " Weapon value: " + weaponValue + " Enemy: " + enemy);
 	}
+
+	public int getRadarValue(){
+		return radarValue;
+	}
+
+	public int getWeaponValue(){
+		return radarValue;
+	}
+
 }
