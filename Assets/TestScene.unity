@@ -253,9 +253,8 @@ GameObject:
   - 224: {fileID: 907052054}
   - 222: {fileID: 907052053}
   - 114: {fileID: 907052052}
-  - 114: {fileID: 907052055}
   m_Layer: 5
-  m_Name: Resources
+  m_Name: Radars
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -316,18 +315,6 @@ RectTransform:
   m_AnchoredPosition: {x: 350, y: 208.5}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &907052055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 907052051}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d86cd681fb6ff41f294fb807b540a7e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guitext: {fileID: 907052052}
 --- !u!1001 &919579087
 Prefab:
   m_ObjectHideFlags: 0
@@ -477,7 +464,6 @@ GameObject:
   - 224: {fileID: 1283679373}
   - 222: {fileID: 1283679375}
   - 114: {fileID: 1283679374}
-  - 114: {fileID: 1283679376}
   m_Layer: 5
   m_Name: Weapons
   m_TagString: Untagged
@@ -540,18 +526,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1283679372}
---- !u!114 &1283679376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1283679372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c98b8fa78874cff87437868440b95d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  guitext: {fileID: 1283679374}
 --- !u!1 &1303694664
 GameObject:
   m_ObjectHideFlags: 0
