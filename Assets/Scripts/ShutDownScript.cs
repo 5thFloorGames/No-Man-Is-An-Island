@@ -15,7 +15,6 @@ public class ShutDownScript : MonoBehaviour {
 	}
 
 	public void Toggle () {
-		print ("stuff happens and isOn is " + isOn);
 		isOn = !isOn;
 		this.gameObject.SetActive (isOn);
 	}

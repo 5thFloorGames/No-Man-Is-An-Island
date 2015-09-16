@@ -25,6 +25,14 @@ public class ResourcesScript : MonoBehaviour {
 		return weapons;
 	}
 
+	public int getSanityLevel(){
+		return sanityLevel;
+	}
+
+	public void increaseSanityLevel(int amount){
+		sanityLevel += amount;
+	}
+
 	public void reduceRadars(int amount){
 		radars -= amount;
 	}
