@@ -7,11 +7,13 @@ public class Threat : ScriptableObject {
 	private int weaponValue;
 	private bool enemy;
 	private bool alive = true;
+	private string threatName;
 
-	public void setup(int radar, int weapon, bool enemy){
+	public void setup(int radar, int weapon, bool enemy, string name){
 		radarValue = radar;
 		weaponValue = weapon;
 		this.enemy = enemy;
+		threatName = name;
 	}
 	
 	public override string ToString(){
@@ -23,7 +25,14 @@ public class Threat : ScriptableObject {
 	}
 
 	public int getWeaponValue(){
-		return radarValue;
+		return weaponValue;
 	}
 
+	public string getName(){
+		return threatName;
+	}
+
+	public void die(){
+		alive = false;
+	}
 }

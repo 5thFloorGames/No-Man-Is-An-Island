@@ -21,7 +21,7 @@ public class ResourcesScript : MonoBehaviour {
 
 	public void CreateThreat(){
 		threat = ScriptableObject.CreateInstance<Threat> ();
-		threat.setup (2, 1, false);
+		threat.setup (2, 1, false, "rowboat");
 		print(threat.ToString ());
 	}
 
@@ -44,6 +44,7 @@ public class ResourcesScript : MonoBehaviour {
 
 	public void reactWeapon(int amount){
 		if (useWeapons (amount)) {
+			threat.die();
 			CanvasChanger.addEventToPhone ("weaponSuccess");
 		} else {
 			CanvasChanger.addEventToPhone ("weaponFailure");
@@ -69,6 +70,10 @@ public class ResourcesScript : MonoBehaviour {
 
 	public int getSanityLevel(){
 		return sanityLevel;
+	}
+
+	public Threat getThreat(){
+		return threat;
 	}
 
 	public void increaseSanityLevel(int amount){
