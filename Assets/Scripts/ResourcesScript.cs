@@ -27,11 +27,9 @@ public class ResourcesScript : MonoBehaviour {
 
 	public void reactRadar(int amount){
 		if (useRadars (amount)) {
-			print ("successsss!");
-			CanvasChanger.addEventToPhone ("success");
+			CanvasChanger.addEventToPhone ("radarSuccess");
 		} else {
-			print ("failuuure");
-			CanvasChanger.addEventToPhone ("failure");
+			CanvasChanger.addEventToPhone ("radarFailure");
 		}
 	}
 
@@ -45,7 +43,11 @@ public class ResourcesScript : MonoBehaviour {
 	}
 
 	public void reactWeapon(int amount){
-		print(useWeapons (amount));
+		if (useWeapons (amount)) {
+			CanvasChanger.addEventToPhone ("weaponSuccess");
+		} else {
+			CanvasChanger.addEventToPhone ("weaponFailure");
+		}	
 	}
 	
 	public bool useWeapons(int amount){

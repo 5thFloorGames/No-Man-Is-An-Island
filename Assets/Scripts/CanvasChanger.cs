@@ -19,9 +19,10 @@ public class CanvasChanger : MonoBehaviour {
 		nameToIndex.Add("wright", 3);
 		nameToIndex.Add ("threatHayes", 4);
 		nameToIndex.Add ("threatWright", 5);
-		nameToIndex.Add ("failure", 6);
-		nameToIndex.Add ("success", 7);
-
+		nameToIndex.Add ("radarFailure", 6);
+		nameToIndex.Add ("radarSuccess", 7);
+		nameToIndex.Add ("weaponFailure", 6);
+		nameToIndex.Add ("weaponSuccess", 7);
 		//phoneQueue.Enqueue ("hayes");
 		//phoneQueue.Enqueue ("wright");
 	}
