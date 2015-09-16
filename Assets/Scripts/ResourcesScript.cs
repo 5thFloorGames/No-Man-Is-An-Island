@@ -6,7 +6,8 @@ public class ResourcesScript : MonoBehaviour {
 	private int radars = 5;
 	private int weapons = 5;
 	private int sanityLevel = 0;
-	private Threat threat;	
+	private Threat threat;
+	public CanvasChanger CanvasChanger;
 	
 	// Use this for initialization
 	void Start () {
@@ -25,7 +26,13 @@ public class ResourcesScript : MonoBehaviour {
 	}
 
 	public void reactRadar(int amount){
-		print(useRadars (amount));
+		if (useRadars (amount)) {
+			print ("successsss!");
+			CanvasChanger.addEventToPhone ("success");
+		} else {
+			print ("failuuure");
+			CanvasChanger.addEventToPhone ("failure");
+		}
 	}
 
 	public bool useRadars(int amount){

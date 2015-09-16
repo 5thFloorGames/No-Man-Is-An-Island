@@ -7,6 +7,7 @@ public class DeskScript : MonoBehaviour {
 
 	public List<Button> buttons;
 	public List<GameObject> activatableOnThreat;
+	public Button phone;
 
 	// Use this for initialization
 	void Start () {
@@ -40,6 +41,18 @@ public class DeskScript : MonoBehaviour {
 		foreach(GameObject g in activatableOnThreat){
 			g.SetActive(true);
 		}
+	}
+
+	public void DeactivatePhone(){
+		phone.interactable = false;
+	}
+
+	public void ActivatePhone(){
+		phone.interactable = true;
+	}
+
+	public void UpdateCanvas(){
+
 	}
 
 }

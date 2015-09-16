@@ -8,9 +8,8 @@ public class CanvasChanger : MonoBehaviour {
 	//public Canvas canvas;
 	public Dictionary<string, int> nameToIndex = new Dictionary<string, int>();
 	public List<Canvas> canvases;
-	public List<string> phone;
-	public int phoneIndex = 0;
 	public Canvas desk;
+	private Queue<string> phoneQueue = new Queue<string>();
 
 	// Use this for initialization
 	void Start () {
@@ -20,8 +19,11 @@ public class CanvasChanger : MonoBehaviour {
 		nameToIndex.Add("wright", 3);
 		nameToIndex.Add ("threatHayes", 4);
 		nameToIndex.Add ("threatWright", 5);
-		phone.Add ("hayes");
-		phone.Add ("wright");
+		nameToIndex.Add ("failure", 6);
+		nameToIndex.Add ("success", 7);
+
+		//phoneQueue.Enqueue ("hayes");
+		//phoneQueue.Enqueue ("wright");
 	}
 	
 	// Update is called once per frame
@@ -30,24 +32,37 @@ public class CanvasChanger : MonoBehaviour {
 	}
 
 	public void Activate(string choice){
+		Canvas activatableCanvas = null;
 		if(choice.Equals("threat")){
 			this.gameObject.SendMessage("CreateThreat");
 			desk.SendMessage("SetButtonsActive");
+			desk.SendMessage("UpdateCanvas");
 		} else if(choice.Equals("phone")){
-			canvases [nameToIndex [phone[phoneIndex]]].GetComponent<ShutDownScript>().Toggle();
-			phoneIndex++;
+			activatableCanvas = canvases [nameToIndex [phoneQueue.Dequeue()]];
+			if(phoneQueue.Count == 0){
+				desk.SendMessage("DeactivatePhone");
+			}
+
 		} else if(choice.Equals("desk")){
 			desk.SendMessage("TurnButtonsOn");
+			desk.SendMessage("UpdateCanvas");
 		} else {
-			canvases [nameToIndex [choice]].GetComponent<ShutDownScript>().Toggle();
+			activatableCanvas = canvases [nameToIndex [choice]];
 			desk.SendMessage("TurnButtonsOff");
 		}
-		//Instantiate (canvas);
-		//canvas.SetActive = true;
-		//Canvas canvasS = (Canvas)canvas;
+		if (activatableCanvas != null) {
+			activatableCanvas.GetComponent<ShutDownScript> ().Toggle ();
+			activatableCanvas.SendMessage ("UpdateCanvas");
+		}
 	}
 
 	private void printKeys(){
 		print(nameToIndex.Keys);
+	}
+
+	public void addEventToPhone(string eventName){
+		phoneQueue.Enqueue(eventName);
+		desk.SendMessage ("ActivatePhone");
+		print ("event added");
 	}
 }
