@@ -73,4 +73,8 @@ public class CanvasChanger : MonoBehaviour {
 		desk.SendMessage ("ActivatePhone");
 		print ("event added");
 	}
+
+	public bool eventsInPhone(){
+		return phoneQueue.Count != 0;
+	}
 }

@@ -26,6 +26,8 @@ public class DeskScript : MonoBehaviour {
 		foreach(Button b in buttons){
 			b.interactable = true;
 		}
+		bool phoneActive = GameObject.FindGameObjectWithTag ("GameController").GetComponent<CanvasChanger> ().eventsInPhone();
+		phone.interactable = phoneActive;
 	}
 
 	public void TurnButtonsOff(){
