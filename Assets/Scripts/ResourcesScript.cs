@@ -49,14 +49,16 @@ public class ResourcesScript : MonoBehaviour {
 			if(!threat.getEnemy()){
 				sanityLevel++;
 				CanvasChanger.addEventToPhone ("destroyedCivilians");
+			} else{
+				CanvasChanger.addEventToPhone ("weaponSuccess");
 			}
-			CanvasChanger.addEventToPhone ("weaponSuccess");
 		} else {
 			if(threat.getEnemy()){
 				sanityLevel++;
 				CanvasChanger.addEventToPhone ("enemyThrough");
+			} else {
+				CanvasChanger.addEventToPhone ("weaponFailure");
 			}
-			CanvasChanger.addEventToPhone ("weaponFailure");
 		}	
 	}
 	

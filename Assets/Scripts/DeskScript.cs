@@ -9,6 +9,8 @@ public class DeskScript : MonoBehaviour {
 	public List<Button> activatableOnThreat;
 	public Button phone;
 	public Button computer;
+	public List<GameObject> items;
+	// buttonState?
 
 	// Use this for initialization
 	void Start () {
@@ -57,7 +59,11 @@ public class DeskScript : MonoBehaviour {
 	}
 
 	public void UpdateCanvas(){
-
+		int sanity = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ResourcesScript> ().getSanityLevel();
+		// Prevent indexoverflow!!!
+		for (int i = 0; i < sanity; i++) {
+			items[i].SetActive(true);
+		}
 	}
 
 	public void ActivateComputer(){
