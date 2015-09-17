@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class DeskScript : MonoBehaviour {
 
 	public List<Button> buttons;
-	public List<GameObject> activatableOnThreat;
+	public List<Button> activatableOnThreat;
 	public Button phone;
+	public Button computer;
 
 	// Use this for initialization
 	void Start () {
@@ -32,15 +33,19 @@ public class DeskScript : MonoBehaviour {
 	}
 
 	public void HideThreatButtons(){
-		foreach(GameObject g in activatableOnThreat){
-			g.SetActive(false);
+		foreach(Button b in activatableOnThreat){
+			b.interactable = false;
 		}
 	}
 
 	public void SetButtonsActive(){
-		foreach(GameObject g in activatableOnThreat){
-			g.SetActive(true);
+		foreach(Button b in activatableOnThreat){
+			b.interactable = true;
 		}
+	}
+
+	public void HayesOut(){
+		activatableOnThreat [0].interactable = false;
 	}
 
 	public void DeactivatePhone(){
@@ -55,4 +60,11 @@ public class DeskScript : MonoBehaviour {
 
 	}
 
+	public void ActivateComputer(){
+		computer.interactable = true;
+	}
+
+	public void DeactivateComputer(){
+		computer.interactable = false;
+	}
 }

@@ -23,6 +23,7 @@ public class CanvasChanger : MonoBehaviour {
 		nameToIndex.Add ("radarSuccess", 7);
 		nameToIndex.Add ("weaponFailure", 6);
 		nameToIndex.Add ("weaponSuccess", 7);
+		this.gameObject.SendMessage("CreateThreat");
 		//phoneQueue.Enqueue ("hayes");
 		//phoneQueue.Enqueue ("wright");
 	}
@@ -35,7 +36,6 @@ public class CanvasChanger : MonoBehaviour {
 	public void Activate(string choice){
 		Canvas activatableCanvas = null;
 		if(choice.Equals("threat")){
-			this.gameObject.SendMessage("CreateThreat");
 			desk.SendMessage("SetButtonsActive");
 			desk.SendMessage("UpdateCanvas");
 		} else if(choice.Equals("phone")){

@@ -3,8 +3,8 @@ using System.Collections;
 
 public class ResourcesScript : MonoBehaviour {
 
-	private int radars = 5;
-	private int weapons = 5;
+	private int radars = 2;
+	private int weapons = 2;
 	private int sanityLevel = 0;
 	private Threat threat;
 	public CanvasChanger CanvasChanger;
@@ -22,6 +22,7 @@ public class ResourcesScript : MonoBehaviour {
 	public void CreateThreat(){
 		threat = ScriptableObject.CreateInstance<Threat> ();
 		threat.setup (2, 1, false, "rowboat");
+		GameObject.FindGameObjectWithTag("Desk").SendMessage("ActivateComputer");
 		print(threat.ToString ());
 	}
 
