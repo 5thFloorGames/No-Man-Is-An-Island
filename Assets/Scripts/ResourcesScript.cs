@@ -21,7 +21,7 @@ public class ResourcesScript : MonoBehaviour {
 
 	public void CreateThreat(){
 		threat = ScriptableObject.CreateInstance<Threat> ();
-		threat.setup (2, 1, false, "rowboat");
+		threat.setup (2, 1, false, "rowboat", "tiny");
 		GameObject.FindGameObjectWithTag("Desk").SendMessage("ActivateComputer");
 		print(threat.ToString ());
 	}
@@ -46,8 +46,16 @@ public class ResourcesScript : MonoBehaviour {
 	public void reactWeapon(int amount){
 		if (useWeapons (amount)) {
 			threat.die();
+			if(!threat.getEnemy()){
+				sanityLevel++;
+				CanvasChanger.addEventToPhone ("destroyedCivilians");
+			}
 			CanvasChanger.addEventToPhone ("weaponSuccess");
 		} else {
+			if(threat.getEnemy()){
+				sanityLevel++;
+				CanvasChanger.addEventToPhone ("enemyThrough");
+			}
 			CanvasChanger.addEventToPhone ("weaponFailure");
 		}	
 	}

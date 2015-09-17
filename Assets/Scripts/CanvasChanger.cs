@@ -23,6 +23,9 @@ public class CanvasChanger : MonoBehaviour {
 		nameToIndex.Add ("radarSuccess", 7);
 		nameToIndex.Add ("weaponFailure", 6);
 		nameToIndex.Add ("weaponSuccess", 7);
+		nameToIndex.Add ("destroyedCivilians", 8);
+		nameToIndex.Add ("enemyThrough", 9);
+
 		this.gameObject.SendMessage("CreateThreat");
 		//phoneQueue.Enqueue ("hayes");
 		//phoneQueue.Enqueue ("wright");
