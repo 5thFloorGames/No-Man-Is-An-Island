@@ -6,7 +6,7 @@ public class RadarSuccess : MonoBehaviour {
 
 	public Text textElement;
 	private string textToModify = "Very good Commander, we have identified the vessel. ";
-	GameObject controller; 
+	GameObject controller;
 
 	// Use this for initialization
 	void Start () {
