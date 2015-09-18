@@ -32,6 +32,7 @@ public class ResourcesScript : MonoBehaviour {
 	public void CreateThreat(){
 		threat = ScriptableObject.CreateInstance<Threat> ();
 		threat.setup (radarValues[threatIndex], weaponValues[threatIndex], enemies[threatIndex], names[threatIndex], "tiny");
+		threatIndex++;
 		GameObject.FindGameObjectWithTag("Desk").SendMessage("ActivateComputer");
 		print(threat.ToString ());
 	}
