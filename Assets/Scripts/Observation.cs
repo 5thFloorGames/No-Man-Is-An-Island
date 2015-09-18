@@ -49,6 +49,6 @@ public class Observation : MonoBehaviour {
 
 	private string RandomValue(string[] array){
 		// bound by sanity
-		return array [Random.Range (0, array.Length)];
+		return array [Random.Range (0, 5)];
 	}
 }
