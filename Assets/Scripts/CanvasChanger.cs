@@ -16,7 +16,7 @@ public class CanvasChanger : MonoBehaviour {
 	                             "Text09W.Weapons","nextVessel","increaseSanity","Text10H.Regret","nextVessel","Text11H.Died",
 	                             "Text12W.Island","Text13N.Resources","nextVessel","increaseSanity","Text14H.Missing","nextVessel",
 	                             "increaseSanity","Text15W.Hate","nextVessel","increaseSanity","Text16H.Dreams","nextVessel","Text17W.Police",
-		"TextTired","Text19N.Question","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel"};
+		"TextTired","Text19N.Question","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel", "end"};
 	public int storyLineIndex = 0;
 
 	// Use this for initialization
@@ -57,6 +57,7 @@ public class CanvasChanger : MonoBehaviour {
 		nameToIndex.Add ("water", 33);
 		nameToIndex.Add ("weaponFailure", 35);
 		nameToIndex.Add ("weaponSuccess", 36);
+		nameToIndex.Add ("credits", 37);
 
 		NextUp ();
 		//phoneQueue.Enqueue ("hayes");
@@ -119,6 +120,8 @@ public class CanvasChanger : MonoBehaviour {
 		} else if (action.Equals ("increaseSanity")) {
 			this.SendMessage ("increaseSanity");
 			NextUp();
+		} else if (action.Equals ("end")) {
+			Activate("credits");
 		} else {
 			addEventToPhone(action);		
 		}
