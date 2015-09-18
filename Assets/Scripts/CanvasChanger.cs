@@ -29,8 +29,6 @@ public class CanvasChanger : MonoBehaviour {
 		nameToIndex.Add ("threatWright", 5);
 		nameToIndex.Add ("radarFailure", 6);
 		nameToIndex.Add ("radarSuccess", 7);
-		nameToIndex.Add ("weaponFailure", 12);
-		nameToIndex.Add ("weaponSuccess", 13);
 		nameToIndex.Add ("destroyedCivilians", 8);
 		nameToIndex.Add ("enemyThrough", 9);
 		nameToIndex.Add ("coffee", 10);
@@ -38,6 +36,8 @@ public class CanvasChanger : MonoBehaviour {
 		nameToIndex.Add ("Text05H.Storm", 12);
 		nameToIndex.Add ("Text06N.Resources", 13);
 		nameToIndex.Add ("Text07W.Honor", 14);
+		nameToIndex.Add ("weaponFailure", 15);
+		nameToIndex.Add ("weaponSuccess", 16);
 
 		NextUp ();
 		//phoneQueue.Enqueue ("hayes");
