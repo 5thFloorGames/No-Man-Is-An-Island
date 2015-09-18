@@ -91,6 +91,10 @@ public class ResourcesScript : MonoBehaviour {
 		sanityLevel += amount;
 	}
 
+	public void increaseSanity(){
+		sanityLevel++;
+	}
+
 	public void reduceRadars(int amount){
 		radars -= amount;
 	}

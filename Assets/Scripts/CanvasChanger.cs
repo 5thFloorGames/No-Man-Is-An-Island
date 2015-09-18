@@ -10,25 +10,36 @@ public class CanvasChanger : MonoBehaviour {
 	public List<Canvas> canvases;
 	public Canvas desk;
 	private Queue<string> phoneQueue = new Queue<string>();
+	public string[] storyLine = {"Text01H.Welcome","Text02W.Welcome","nextVessel","nextVessel","Text03H.Rumours","nextVessel",
+	                             "increaseSanity","Text04W.Giveme","Text05H.Storm","Text06N.Resources","nextVessel","increaseSanity",
+	                             "Text07W.Honor","nextVessel","increaseSanity","Text08H.Fishing","nextVessel","increaseSanity",
+	                             "Text09W.Weapons","nextVessel","increaseSanity","Text10H.Regret","nextVessel","Text11H.Died",
+	                             "Text12W.Island","Text13N.Resources","nextVessel","increaseSanity","Text14H.Missing","nextVessel",
+	                             "increaseSanity","Text15W.Hate","nextVessel","increaseSanity","Text16H.Dreams","nextVessel","Text17W.Police",
+		"TextTired","Text19N.Question","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel"};
+	public int storyLineIndex = 0;
 
 	// Use this for initialization
 	void Start () {
-		nameToIndex.Add("firstObs", 0);
-		nameToIndex.Add("concl", 1);
-		nameToIndex.Add("hayes", 2);
-		nameToIndex.Add("wright", 3);
+		nameToIndex.Add("Text01H.Welcome", 0);
+		nameToIndex.Add("Text02W.Welcome", 1);
+		nameToIndex.Add("Text03H.Rumours", 2);
+		nameToIndex.Add("Text04W.Giveme", 3);
 		nameToIndex.Add ("threatHayes", 4);
 		nameToIndex.Add ("threatWright", 5);
 		nameToIndex.Add ("radarFailure", 6);
 		nameToIndex.Add ("radarSuccess", 7);
-		nameToIndex.Add ("weaponFailure", 6);
-		nameToIndex.Add ("weaponSuccess", 7);
+		nameToIndex.Add ("weaponFailure", 12);
+		nameToIndex.Add ("weaponSuccess", 13);
 		nameToIndex.Add ("destroyedCivilians", 8);
 		nameToIndex.Add ("enemyThrough", 9);
 		nameToIndex.Add ("coffee", 10);
 		nameToIndex.Add ("observation", 11);
+		nameToIndex.Add ("Text05H.Storm", 12);
+		nameToIndex.Add ("Text06N.Resources", 13);
+		nameToIndex.Add ("Text07W.Honor", 14);
 
-		this.gameObject.SendMessage("CreateThreat");
+		NextUp ();
 		//phoneQueue.Enqueue ("hayes");
 		//phoneQueue.Enqueue ("wright");
 	}
@@ -40,7 +51,10 @@ public class CanvasChanger : MonoBehaviour {
 
 	public void Activate(string choice){
 		Canvas activatableCanvas = null;
-		if(choice.Equals("threat")){
+		if (choice.Equals ("nextUp")) {
+			NextUp();
+			Activate("desk");
+		} else if(choice.Equals("threat")){
 			activatableCanvas = canvases [nameToIndex ["observation"]];
 		} else if (choice.Equals ("react")){
 			desk.SendMessage("SetButtonsActive");
@@ -76,5 +90,18 @@ public class CanvasChanger : MonoBehaviour {
 
 	public bool eventsInPhone(){
 		return phoneQueue.Count != 0;
+	}
+
+	private void NextUp(){
+		string action = storyLine [storyLineIndex];
+		storyLineIndex++;
+		if (action.Equals ("nextVessel")) {
+			this.gameObject.SendMessage ("CreateThreat");
+		} else if (action.Equals ("increaseSanity")) {
+			this.SendMessage ("increaseSanity");
+			NextUp();
+		} else {
+			addEventToPhone(action);		
+		}
 	}
 }
