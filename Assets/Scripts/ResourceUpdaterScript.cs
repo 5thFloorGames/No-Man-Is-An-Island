@@ -15,7 +15,7 @@ public class ResourceUpdaterScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		weapons.text = "Weapon bursts: " + logic.GetComponent<ResourcesScript>().getWeapons();
-		radars.text = "Radar blasts: " + logic.GetComponent<ResourcesScript>().getRadars();	
+		weapons.text = "Weapon assets: " + logic.GetComponent<ResourcesScript>().getWeapons();
+		radars.text = "Radar Energy: " + logic.GetComponent<ResourcesScript>().getRadars();	
 	}
 }
