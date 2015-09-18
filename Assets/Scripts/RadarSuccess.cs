@@ -20,7 +20,7 @@ public class RadarSuccess : MonoBehaviour {
 	public void UpdateCanvas() {
 		controller = GameObject.FindWithTag ("GameController");
 		Threat threat = controller.GetComponent<ResourcesScript> ().getThreat();
-		textElement.text = textToModify + "It is a " + threat.getName() + ". It can probably take around "
+		textElement.text = textToModify + "It is " + threat.getName() + ". It can probably take around "
 			+ threat.getWeaponValue() + " worth of weapons to take it down.";
 	}
 }
