@@ -16,7 +16,7 @@ public class CanvasChanger : MonoBehaviour {
 	                             "Text09W.Weapons","nextVessel","increaseSanity","Text10H.Regret","nextVessel","Text11H.Died",
 	                             "Text12W.Island","Text13N.Resources","nextVessel","increaseSanity","Text14H.Missing","nextVessel",
 	                             "increaseSanity","Text15W.Hate","nextVessel","increaseSanity","Text16H.Dreams","nextVessel","Text17W.Police",
-		"TextTired","Text19N.Question","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel", "end"};
+		"TextTired","Text19N.Question", "increaseSanity","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel", "end"};
 	public int storyLineIndex = 0;
 
 	// Use this for initialization
@@ -52,9 +52,10 @@ public class CanvasChanger : MonoBehaviour {
 		nameToIndex.Add ("lighter", 28);
 		nameToIndex.Add ("sandwich", 29);
 		nameToIndex.Add ("compass", 30);
-		nameToIndex.Add ("flags", 31);
-		nameToIndex.Add ("anchor", 32);
-		nameToIndex.Add ("water", 33);
+		nameToIndex.Add ("pills", 31);
+		nameToIndex.Add ("flags", 32);
+		nameToIndex.Add ("anchor", 33);
+		nameToIndex.Add ("water", 34);
 		nameToIndex.Add ("weaponFailure", 35);
 		nameToIndex.Add ("weaponSuccess", 36);
 		nameToIndex.Add ("credits", 37);
