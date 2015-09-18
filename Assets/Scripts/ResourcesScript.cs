@@ -15,7 +15,7 @@ public class ResourcesScript : MonoBehaviour {
 		"A chthonian hydra", "Something eldritch rising from the sea", "Forgiveness", "Shame, guilt and regret",
 		"The bodies beneath the waves", "How it could have been avoided", "Me"};	
 	int[] radarValues = {1,2,2,2,3,2,2,1,3,2,3,1,1,3,1,2,2,3};
-	int[] weaponValues = {0,1,2,2,1,3,4,2,0,2,0,3,4,3,3,3,2,4};
+	int[] weaponValues = {1,1,2,2,1,3,4,2,1,2,1,3,4,3,3,3,2,4};
 	bool[] enemies = {false, true, false, true, true, true, true, true, false, true, false, true, true, false, true, true, true, true};
 	int threatIndex = 0;
 
