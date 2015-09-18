@@ -47,7 +47,7 @@ public class ResourcesScript : MonoBehaviour {
 		if (useWeapons (amount)) {
 			threat.die();
 			if(!threat.getEnemy()){
-				sanityLevel++;
+				//sanityLevel++;
 				CanvasChanger.addEventToPhone ("destroyedCivilians");
 			} else{
 				CanvasChanger.addEventToPhone ("weaponSuccess");
