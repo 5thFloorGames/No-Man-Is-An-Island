@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ResourcesScript : MonoBehaviour {
 
@@ -8,7 +9,16 @@ public class ResourcesScript : MonoBehaviour {
 	private int sanityLevel = 0;
 	private Threat threat;
 	public CanvasChanger CanvasChanger;
-	
+	List<string> names = {"A small civilian passenger ship", "An enemy scout", "A friendly container vessel",
+		"An enemy missile boat", "An enemy stealth scout", "An enemy class-5 corvette", "An enemy destroyer",
+		"A threatening warship", "A civilian schooner filled with hope", "A sea serpent", "My father’s old wooden rowboat",
+		"A chthonian hydra", "Something eldritch rising from the sea", "Forgiveness", "Shame, guilt and regret",
+		"The bodies beneath the waves", "How it could have been avoided", "Me"};	
+	List<Int> radarValues = {1,2,2,2,3,2,2,1,3,2,3,1,1,3,1,2,2,3};
+	List<Int> weaponValues = {0,1,2,2,1,3,4,2,0,2,0,3,4,3,3,3,2,4};
+	List<bool> enemies = {false, true, false, true, true, true, true, true, false, true, false, true, true, false, true, true, true, true};
+	int threatIndex = 0;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -21,7 +31,7 @@ public class ResourcesScript : MonoBehaviour {
 
 	public void CreateThreat(){
 		threat = ScriptableObject.CreateInstance<Threat> ();
-		threat.setup (2, 1, false, "rowboat", "tiny");
+		threat.setup (radarValues[threatIndex], weaponValues[threatIndex], enemies[threatIndex], names[threatIndex], "tiny");
 		GameObject.FindGameObjectWithTag("Desk").SendMessage("ActivateComputer");
 		print(threat.ToString ());
 	}
