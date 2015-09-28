@@ -127,4 +127,8 @@ public class CanvasChanger : MonoBehaviour {
 			addEventToPhone(action);		
 		}
 	}
+
+	public void Quit(){
+		Application.Quit ();
+	}
 }
