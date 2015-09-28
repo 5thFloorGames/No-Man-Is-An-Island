@@ -118,10 +118,16 @@ public class ResourcesScript : MonoBehaviour {
 
 	public void reduceRadars(int amount){
 		radars -= amount;
+		if (radars < 0) {
+			radars = 0;
+		}
 	}
 
 	public void reduceWeapons(int amount){
 		weapons -= amount;
+		if (weapons < 0) {
+			weapons = 0;
+		}
 	}
 
 	public void addRadars(int amount){
