@@ -1785,7 +1785,7 @@ MonoBehaviour:
   m_Text: 'Very good Commander, we have successfully destroyed the enemy vessel.
 
 
-    Our troops were able to salvage munitions. '
+    Our troops were able to salvage some munitions from it. '
 --- !u!222 &359558001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5561,7 +5561,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'An enemy ship got through our lines and raided our island.
+  m_Text: 'The enemy ship got through our lines and raided our island.
 
 
     They seized some of our munitions.

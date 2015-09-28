@@ -13,7 +13,7 @@ public class Observation : MonoBehaviour {
 		"16.5 knots",
 		"11 ⅔ knots",
 		"19.8 knots",
-		"0000.23 knotws",
+		"0000.23 knots",
 		"63.51 knots",
 		"-310.11 knots",
 		".07831 knots",
