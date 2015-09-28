@@ -16,7 +16,7 @@ public class CanvasChanger : MonoBehaviour {
 	                             "Text09W.Weapons","nextVessel","increaseSanity","Text10H.Regret","nextVessel","Text11H.Died",
 	                             "Text12W.Island","Text13N.Resources","nextVessel","increaseSanity","Text14H.Missing","nextVessel",
 	                             "increaseSanity","Text15W.Hate","nextVessel","increaseSanity","Text16H.Dreams","nextVessel","Text17W.Police",
-		"TextTired","Text19N.Question","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel","nextVessel", "end"};
+		"TextTired","nextVessel", "Text19N.Question","end"};
 	public int storyLineIndex = 0;
 
 	// Use this for initialization

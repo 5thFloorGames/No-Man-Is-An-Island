@@ -9,14 +9,24 @@ public class ResourcesScript : MonoBehaviour {
 	private int sanityLevel = 0;
 	private Threat threat;
 	public CanvasChanger CanvasChanger;
-	string[] names = {"a small civilian passenger ship", "an enemy scout", "a friendly container vessel",
-		"an enemy missile boat", "an enemy stealth scout", "an enemy class-5 corvette", "an enemy destroyer",
-		"a threatening warship", "a civilian schooner filled with hope", "a sea serpent", "my father’s old wooden rowboat",
-		"a chthonian hydra", "something eldritch rising from the sea", "forgiveness", "shame, guilt and regret",
-		"the bodies beneath the waves", "how it could have been avoided", "me"};	
-	int[] radarValues = {1,2,2,2,3,2,2,1,3,2,3,1,1,3,1,2,2,3};
-	int[] weaponValues = {1,1,2,2,1,3,4,2,1,2,1,3,4,3,3,3,2,4};
-	bool[] enemies = {false, true, false, true, true, true, true, true, false, true, false, true, true, false, true, true, true, true};
+	string[] names = {
+		"a small civilian passenger ship", 
+		"an enemy scout", 
+		"a friendly container vessel carrying munitions",
+		"an enemy missile boat", 
+		"an octopus like underwater enemy stealth drone", 
+		"an enemy class-5 corvette", 
+		"an enemy destroyer equipped with shame, guilt and regret", 
+		"a civilian schooner filled with hope", 
+		"a slithering sea serpent", 
+		"my father’s old wooden rowboat",
+		"a chthonian hydra", 
+		"something eldritch rising from the sea", 
+		"forgiveness", 
+	};	
+	int[] radarValues = {1,2,2,2,3,2,2,3,2,3,1,1,3};
+	int[] weaponValues = {1,1,2,2,3, 3, 4, 1, 2, 1, 3, 4, 2};
+	bool[] enemies = {false, true, false, true, true, true, true, false, true, false, true, true, false};
 	int threatIndex = 0;
 
 	// Use this for initialization
