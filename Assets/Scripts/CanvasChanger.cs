@@ -106,7 +106,7 @@ public class CanvasChanger : MonoBehaviour {
 	public void addEventToPhone(string eventName){
 		phoneQueue.Enqueue(eventName);
 		desk.SendMessage ("ActivatePhone");
-		print ("event added");
+		//print ("event added");
 	}
 
 	public bool eventsInPhone(){

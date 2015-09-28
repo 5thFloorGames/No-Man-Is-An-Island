@@ -39,9 +39,9 @@ public class ResourcesScript : MonoBehaviour {
 
 	public void reactRadar(int amount){
 		if (useRadars (amount)) {
-			CanvasChanger.addEventToPhone ("radarSuccess");
+			CanvasChanger.Activate ("radarSuccess");
 		} else {
-			CanvasChanger.addEventToPhone ("radarFailure");
+			CanvasChanger.Activate ("radarFailure");
 		}
 	}
 
@@ -59,16 +59,16 @@ public class ResourcesScript : MonoBehaviour {
 			threat.die();
 			if(!threat.getEnemy()){
 				//sanityLevel++;
-				CanvasChanger.addEventToPhone ("destroyedCivilians");
+				CanvasChanger.Activate ("destroyedCivilians");
 			} else{
-				CanvasChanger.addEventToPhone ("weaponSuccess");
+				CanvasChanger.Activate ("weaponSuccess");
 			}
 		} else {
 			if(threat.getEnemy()){
 				//sanityLevel++;
-				CanvasChanger.addEventToPhone ("enemyThrough");
+				CanvasChanger.Activate ("enemyThrough");
 			} else {
-				CanvasChanger.addEventToPhone ("weaponFailure");
+				CanvasChanger.Activate ("weaponFailure");
 			}
 		}	
 	}
