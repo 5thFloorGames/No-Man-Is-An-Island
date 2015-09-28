@@ -8,24 +8,38 @@ public class Observation : MonoBehaviour {
 	private string textToModify = "Sir, we have an unidentified vessel approaching.\n";
 	GameObject controller;
 	private string[] speeds = {
-		"9.0",
-		"6.1",
-		"16.5",
-		"11 ⅔",
-		"19.8",
-		"0000.23",
-		"63.51",
-		"-310.11",
-		".07831",
-		"4.6i",
-		"sqrt(32)",	
+		"9.0 knots",
+		"6.1 knots",
+		"16.5 knots",
+		"11 ⅔ knots",
+		"19.8 knots",
+		"0000.23 knotws",
+		"63.51 knots",
+		"-310.11 knots",
+		".07831 knots",
+		"4.6i knots",
+		"sqrt(32) knots",	
 		"ظصش",
 
 		"indefinite"
 	};
 
-	private string[] sizes = {"medium", "negliable", "small", "large", "closed", "gargantuan", "asymmetrical", "malformed","four-dimensional", "indescribable", "anguilliform", "noneuclidean", "memoryladen"};
-	private string[] bearings = {"north", "north-west", "west", "south-west", "south-east", "north-east", "direction unclear", "going in circles", "tangential", "memories of a loved one", "unconsciousness", "backwards in time", "towards space"};
+	private string[] sizes = {
+		"our radars suggest the target is rather negliable", 
+		"the target appears to be of medium-size", 
+		"the target shows as rather small in our radars", 
+		"the target appears rather significant in size", 
+		"our radars indicate the target is of gargantuan porportions", 
+		"the target appears asymmetrical and unpredictable", 
+		"the target appears to malformed by emotions, especially guilt",
+		"our radars indicate the target has an additional dimension", 
+		"our radar-report suggests the target is indescribable",  
+		"the nature of the target seems noneuclidean, and it has its own consciousness",
+		"the target is heavily laden with memories",
+		"the target appears to be you, Sir", 
+		"please, make it go away..."
+	};
+	private string[] bearings = {"north", "north-west", "west", "south-west", "south-east", "north-east", "direction unclear", "going in circles", "tangential", "memories of a loved one", "unconsciousness", "backwards in time", "towards infinity"};
 
 	// Use this for initialization
 	void Start () {
