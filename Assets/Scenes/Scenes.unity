@@ -1070,19 +1070,31 @@ Prefab:
         type: 3}
     - target: {fileID: 22449290, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 310
+      value: 257
       objectReference: {fileID: 0}
     - target: {fileID: 22449290, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 172
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 22432298, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 186
+      value: 178
       objectReference: {fileID: 0}
     - target: {fileID: 22432298, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 310
+      value: 257
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481600, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
+      propertyPath: m_Text
+      value: 'Radar Energy: 5'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454658, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
+      propertyPath: m_Text
+      value: 'Weapon Assets: 4'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431748, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
@@ -2426,6 +2438,8 @@ GameObject:
   - 223: {fileID: 533464265}
   - 114: {fileID: 533464264}
   - 114: {fileID: 533464263}
+  - 114: {fileID: 533464266}
+  - 114: {fileID: 533464267}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -2507,6 +2521,29 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 10000
+--- !u!114 &533464266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533464261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8991489a0bf594d51ab119b23d730a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+--- !u!114 &533464267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 533464261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ef2b8fddb1824772beb205f12971163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &534498526
 GameObject:
   m_ObjectHideFlags: 0
