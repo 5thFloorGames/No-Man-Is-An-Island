@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 public class ResourcesScript : MonoBehaviour {
 
-	private int radars = 16;
-	private int weapons = 16;
+	private int radars = 15;
+	private int weapons = 15;
 	private int sanityLevel = 0;
 	private Threat threat;
 	public CanvasChanger CanvasChanger;
@@ -14,7 +14,7 @@ public class ResourcesScript : MonoBehaviour {
 		"an enemy scout", 
 		"a friendly container vessel carrying munitions",
 		"an enemy missile boat", 
-		"an octopus like underwater enemy stealth drone", 
+		"an octopus-like underwater enemy stealth drone", 
 		"an enemy class-5 corvette", 
 		"an enemy destroyer equipped with shame, guilt and regret", 
 		"a civilian schooner filled with hope", 
