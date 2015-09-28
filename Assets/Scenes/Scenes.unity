@@ -559,7 +559,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &166032365
 RectTransform:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8991489a0bf594d51ab119b23d730a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 1
+  isOn: 0
 --- !u!114 &166032368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1336,15 +1336,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22449290, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 165
+      value: 152
       objectReference: {fileID: 0}
     - target: {fileID: 22432298, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 178
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 22432298, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 257
+      value: 257.000061
       objectReference: {fileID: 0}
     - target: {fileID: 11481600, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_Text
@@ -1357,6 +1357,10 @@ Prefab:
     - target: {fileID: 11431748, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_UiScaleMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431748, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
@@ -7284,7 +7288,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: desk
+          m_StringArgument: nextUp
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 166032367}
@@ -7296,6 +7300,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 889368541}
+        m_MethodName: Activate
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: desk
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -10414,7 +10429,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11480086, guid: 6e50f3352608e47ebb16a761b84f8ee9, type: 2}
       propertyPath: canvases.Array.size
-      value: 38
+      value: 39
       objectReference: {fileID: 0}
     - target: {fileID: 488190, guid: 6e50f3352608e47ebb16a761b84f8ee9, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10619,7 +10634,7 @@ Prefab:
     - target: {fileID: 11480086, guid: 6e50f3352608e47ebb16a761b84f8ee9, type: 2}
       propertyPath: canvases.Array.data[38]
       value: 
-      objectReference: {fileID: 202293723}
+      objectReference: {fileID: 166032370}
     - target: {fileID: 11480086, guid: 6e50f3352608e47ebb16a761b84f8ee9, type: 2}
       propertyPath: canvases.Array.data[39]
       value: 

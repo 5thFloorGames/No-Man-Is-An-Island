@@ -59,8 +59,9 @@ public class CanvasChanger : MonoBehaviour {
 		nameToIndex.Add ("weaponFailure", 35);
 		nameToIndex.Add ("weaponSuccess", 36);
 		nameToIndex.Add ("credits", 37);
+		nameToIndex.Add ("intro", 38);
 
-		NextUp ();
+		Activate ("intro");
 		//phoneQueue.Enqueue ("hayes");
 		//phoneQueue.Enqueue ("wright");
 	}
