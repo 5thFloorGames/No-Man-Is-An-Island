@@ -1070,19 +1070,31 @@ Prefab:
         type: 3}
     - target: {fileID: 22449290, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 310
+      value: 257
       objectReference: {fileID: 0}
     - target: {fileID: 22449290, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 172
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 22432298, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 186
+      value: 178
       objectReference: {fileID: 0}
     - target: {fileID: 22432298, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 310
+      value: 257
+      objectReference: {fileID: 0}
+    - target: {fileID: 11481600, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
+      propertyPath: m_Text
+      value: 'Radar Energy: 5'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454658, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
+      propertyPath: m_Text
+      value: 'Weapon Assets: 4'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11431748, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dcf94e090243410298e54ddee6fbeb6, type: 2}
