@@ -8,27 +8,24 @@ public class Observation : MonoBehaviour {
 	private string textToModify = "Sir, we have an unidentified vessel approaching.\n";
 	GameObject controller;
 	private string[] speeds = {
-		"7",
-		"9",
-		"12.5",
-		"14",
-		"16 ⅔",
-		"17.8",
-		"19",
-		"22.4",
-		"23",
+		"9.0",
+		"6.1",
+		"16.5",
+		"11 ⅔",
+		"19.8",
+		"0000.23",
 		"63.51",
-		"310.11",
-		"-22",
+		"-310.11",
 		".07831",
 		"4.6i",
-		"sqrt(32)",
+		"sqrt(32)",	
 		"ظصش",
+
 		"indefinite"
 	};
 
-	private string[] sizes = {"tiny", "small", "medium", "large", "huge", "gargantuan", "asymmetrical", "closed", "malformed", "unporportionated", "four-dimensional", "indescribable", "anguilliform", "cochleate", "memoryladen"};
-	private string[] bearings = {"north", "north-west", "west", "south-west", "south", "south-east", "east", "north-east", "direction unclear", "going in circles", "tangential", "noneuclidean", "towards lower gravity", "unconscious", "indian summer", "past regrets", "memories of a loved one"};
+	private string[] sizes = {"medium", "negliable", "small", "large", "closed", "gargantuan", "asymmetrical", "malformed","four-dimensional", "indescribable", "anguilliform", "noneuclidean", "memoryladen"};
+	private string[] bearings = {"north", "north-west", "west", "south-west", "south-east", "north-east", "direction unclear", "going in circles", "tangential", "memories of a loved one", "unconsciousness", "backwards in time", "towards space"};
 
 	// Use this for initialization
 	void Start () {
