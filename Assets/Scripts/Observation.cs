@@ -25,19 +25,19 @@ public class Observation : MonoBehaviour {
 	};
 
 	private string[] sizes = {
-		"our radars suggest the target is rather negliable", 
-		"the target appears to be of medium-size", 
-		"the target shows as rather small in our radars", 
-		"the target appears rather significant in size", 
-		"our radars indicate the target is of gargantuan porportions", 
-		"the target appears asymmetrical and unpredictable", 
-		"the target appears to malformed by emotions, especially guilt",
-		"our radars indicate the target has an additional dimension", 
-		"our radar-report suggests the target is indescribable",  
-		"the nature of the target seems noneuclidean, and it has its own consciousness",
-		"the target is heavily laden with memories",
-		"the target appears to be you, Sir", 
-		"please, make it go away..."
+		"Our radars suggest the target is rather negliable.", 
+		"The target appears to be of medium-size.", 
+		"The target shows rather small in our radars.", 
+		"The target appears significant in size.", 
+		"Our radars indicate the target is of gargantuan porportions.", 
+		"The target appears asymmetrical and unpredictable.", 
+		"The target appears to malformed by emotions, especially guilt.",
+		"Our radars indicate the target has an additional dimension.", 
+		"Our radar-report suggests the target is indescribable.",  
+		"The nature of the target seems noneuclidean, and it has its own consciousness.",
+		"The target is heavily laden with memories.",
+		"The target appears to be you, Sir.", 
+		"Please, make it go away..."
 	};
 	private string[] bearings = {"north", "north-west", "west", "south-west", "south-east", "north-east", "direction unclear", "going in circles", "tangential", "memories of a loved one", "unconsciousness", "backwards in time", "towards infinity"};
 
@@ -56,7 +56,7 @@ public class Observation : MonoBehaviour {
 		Threat threat = controller.GetComponent<ResourcesScript> ().getThreat();
 		int sanity =  controller.GetComponent<ResourcesScript> ().getSanityLevel();
 		textElement.text = textToModify + "\nBearing: " + RandomBearing(sanity) + "\nSpeed: " 
-			+ RandomSpeed(sanity) + "\nDescription: " + RandomSize(sanity);
+			+ RandomSpeed(sanity) + "\n \n" + RandomSize(sanity);
 	}
 
 	private string RandomSpeed(int sanity){
