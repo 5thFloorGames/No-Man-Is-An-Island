@@ -5,7 +5,7 @@ using System.Collections;
 public class RadarSuccess : MonoBehaviour {
 
 	public Text textElement;
-	private string textToModify = "Very good Commander, we have identified the vessel. ";
+	private string textToModify = "Very good Commander, we have identified the vessel.";
 	GameObject controller;
 
 	// Use this for initialization
@@ -20,7 +20,8 @@ public class RadarSuccess : MonoBehaviour {
 	public void UpdateCanvas() {
 		controller = GameObject.FindWithTag ("GameController");
 		Threat threat = controller.GetComponent<ResourcesScript> ().getThreat();
-		textElement.text = textToModify + "It is " + threat.getName() + ". It can probably take around "
-			+ threat.getWeaponValue() + " worth of weapons to take it down.";
+		textElement.text = textToModify + "It is " + threat.getName () + ".";
+		//  It can probably take around "
+		// 	+ threat.getWeaponValue() + " worth of weapons to take it down.";
 	}
 }
