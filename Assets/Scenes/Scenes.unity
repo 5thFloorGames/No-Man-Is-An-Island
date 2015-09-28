@@ -1322,6 +1322,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 889368539}
+        m_MethodName: reduceWeapons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &322767294
@@ -1493,7 +1504,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Very good Commander, we have destroyed the vessel.
+  m_Text: 'Very good Commander, we have successfully destroyed the enemy vessel.
+
+
+    Our troops were able to salvage munitions. '
 --- !u!222 &359558001
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3059,7 +3073,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Weapon Results
+  m_Text: Supplies received
 --- !u!222 &618447036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3666,7 +3680,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I'm sorry to inform that you just destroyed a friendly ship.
+  m_Text: 'I''m sorry to inform that you just destroyed a friendly ship carrying supplies.
+
+
+    We had to redirect power from our radars to support the civilians.'
 --- !u!222 &738341068
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3922,6 +3939,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 889368539}
+        m_MethodName: addWeapons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5064,7 +5092,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I'm sorry to inform that you let an enemy through our lines.
+  m_Text: 'An enemy ship got through our lines and raided our island.
+
+
+    They seized some of our munitions.
+
+'
 --- !u!222 &1045306259
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5447,7 +5480,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Weapon Results
+  m_Text: Threat Eliminated
 --- !u!222 &1249446585
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6221,7 +6254,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enemy Through
+  m_Text: Enemy Raid
 --- !u!222 &1544227805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7667,7 +7700,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I'm sorry to inform that the ship got through.
+  m_Text: 'A civilian ship has safely reached our port. It was carrying medicine,
+    food and other supplies.
+
+
+    We have now more energy available for our radars.'
 --- !u!222 &1675346429
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7982,6 +8019,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 889368539}
+        m_MethodName: addRadars
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9128,7 +9176,7 @@ GameObject:
   - 114: {fileID: 2005975475}
   - 114: {fileID: 2005975474}
   m_Layer: 5
-  m_Name: WeaponFailure
+  m_Name: CivilianThrough
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9315,6 +9363,17 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 889368539}
+        m_MethodName: reduceRadars
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
