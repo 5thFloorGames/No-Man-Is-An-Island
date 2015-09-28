@@ -34,7 +34,7 @@ public class ResourcesScript : MonoBehaviour {
 		threat.setup (radarValues[threatIndex], weaponValues[threatIndex], enemies[threatIndex], names[threatIndex], "tiny");
 		threatIndex++;
 		GameObject.FindGameObjectWithTag("Desk").SendMessage("ActivateComputer");
-		print(threat.ToString ());
+		//print(threat.ToString ());
 	}
 
 	public void reactRadar(int amount){

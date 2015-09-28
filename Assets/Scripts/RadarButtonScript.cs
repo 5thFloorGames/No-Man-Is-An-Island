@@ -19,8 +19,15 @@ public class RadarButtonScript : MonoBehaviour {
 
 	public void UpdateCanvas(){
 		int radars = Mathf.Min(GameObject.FindGameObjectWithTag ("GameController").GetComponent<ResourcesScript> ().getRadars (),3);
+
 		for (int i = 0; i <= radars; i++) {
 			buttons[i].interactable = true;
 		}
+		if (radars < 3) {
+			for (int i = radars + 1; i < buttons.Count; i++) {
+				buttons[i].interactable = false;
+			}
+		}
+
 	}
 }

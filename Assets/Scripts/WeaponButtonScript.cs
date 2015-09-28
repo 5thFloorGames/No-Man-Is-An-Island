@@ -19,8 +19,14 @@ public class WeaponButtonScript : MonoBehaviour {
 
 	public void UpdateCanvas(){
 		int weapons = Mathf.Min(GameObject.FindGameObjectWithTag ("GameController").GetComponent<ResourcesScript> ().getWeapons(),3);
-		for (int i = 0; i <= weapons; i++) {
+
+		for (int i = 0; i < buttons.Count; i++) {
 			buttons[i].interactable = true;
+		}
+		if (weapons < 3) {
+			for (int i = weapons + 1; i < buttons.Count; i++) {
+				buttons[i].interactable = false;
+			}
 		}
 	}
 }

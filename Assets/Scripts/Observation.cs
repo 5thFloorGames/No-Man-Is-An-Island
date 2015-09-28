@@ -43,12 +43,26 @@ public class Observation : MonoBehaviour {
 	public void UpdateCanvas() {
 		controller = GameObject.FindWithTag ("GameController");
 		Threat threat = controller.GetComponent<ResourcesScript> ().getThreat();
-		textElement.text = textToModify + "\nBearing: " + RandomValue(bearings) + "\nSpeed: " 
-			+ RandomValue(speeds) + "\nDescription: " + RandomValue(sizes);
+		int sanity =  controller.GetComponent<ResourcesScript> ().getSanityLevel();
+		textElement.text = textToModify + "\nBearing: " + RandomBearing(sanity) + "\nSpeed: " 
+			+ RandomSpeed(sanity) + "\nDescription: " + RandomSize(sanity);
+	}
+
+	private string RandomSpeed(int sanity){
+		return speeds[Random.Range((0 + sanity), (5 + sanity))];
+	}
+
+	private string RandomBearing(int sanity){
+		return bearings[Random.Range((0 + sanity), (5 + sanity))];
+	}
+	
+	private string RandomSize(int sanity){
+		return sizes[Random.Range((0 + sanity), (5 + sanity))];
 	}
 
 	private string RandomValue(string[] array){
 		// bound by sanity
+
 		return array [Random.Range (0, 5)];
 	}
 }
