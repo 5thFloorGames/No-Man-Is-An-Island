@@ -14,13 +14,12 @@ public class RadarSuccess : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
 	}
 
 	public void UpdateCanvas() {
 		controller = GameObject.FindWithTag ("GameController");
 		Threat threat = controller.GetComponent<ResourcesScript> ().getThreat();
-		textElement.text = textToModify + "It is " + threat.getName () + ".";
+		textElement.text = textToModify + " It is " + threat.getName () + ".";
 		//  It can probably take around "
 		// 	+ threat.getWeaponValue() + " worth of weapons to take it down.";
 	}
