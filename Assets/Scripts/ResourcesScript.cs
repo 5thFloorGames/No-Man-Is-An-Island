@@ -9,61 +9,35 @@ public class ResourcesScript : MonoBehaviour {
 	private int sanityLevel = 0;
 	private Threat threat;
 	public CanvasChanger CanvasChanger;
-	
-	string[] names = {
-		"a small civilian passenger ship", 
-		"an enemy scout", 
-		"a friendly container vessel carrying munitions",
-		"an enemy missile boat", 
-		"an octopus-like underwater enemy stealth drone", 
-		"an enemy class-5 corvette", 
-		"an enemy destroyer equipped with shame, guilt and regret", 
-		"a civilian schooner filled with hope", 
-		"a slithering sea serpent", 
-		"my father’s old wooden rowboat",
-		"a chthonian hydra", 
-		"something eldritch rising from the sea", 
-		"forgiveness", 
-	};	
-	int[] radarValues = {
-		1,
-		2,
-		2,
-		2,
-		3,
-		2,
-		2,
-		3,
-		2,
-		3,
-		1,
-		1,
-		3
-	};
-	int[] weaponValues = {
-		1,
-		1,
-		2,
-		2,
-		3,
-		3,
-		4,
-		1,
-		2,
-		1,
-		3,
-		4,
-		2
-	};
-	bool[] enemies = {false, true, false, true, true, true, true, false, true, false, true, true, false};
-	int threatIndex = 0;
+
 
 	// Use this for initialization
 	void Start () {
-		AddVessel ("a small civilian passenger ship", 1, 1, false);
-
+		AddVessel ("a small civilian container ship carrying supplies", 1, 2, false);
+		AddVessel ("an enemy patrol vessel, used mainly for scouting", 2, 2, true);
+		AddVessel ("a friendly passenger ship carrying refugees", 2, 1, false);
+		AddVessel ("a light enemy missile boat", 1, 1, true);
+		AddVessel ("an enemy class-5 corvette, used to support and protect heavier vessels", 2, 3, true);
+		AddVessel ("an octopus-like underwater enemy minesweeper", 3, 3, true);
+		AddVessel ("an enemy destroyer equipped with shame, guilt and regret", 3, 3, true);
+		AddVessel ("an enemy aircraft carrier with a dozen of G50-bombers carrying liquid hate", 3, 4, true);
+		AddVessel ("a civilian schooner filled with hope", 2, 2, false);
+		AddVessel ("a mechanical, steam-operated hydra from the underworld", 3, 2, true);
+		AddVessel ("an old oaken rowboat, both oars still aboard", 1, 2, false);
+		AddVessel ("something eldritch rising from the bottom of the sea, its foam washing the shores with blood", 3, 4, true);
+		AddVessel ("a reflection of a moon on a calm lake during the last days of indian summer, just before the storm", 3, 3, false);
+	
 		threatIndex = 0;
 	}
+
+
+	string[] names = new string[13];	
+	int[] radarValues = new int [13];
+	int[] weaponValues = new int [13];
+	bool[] enemies = new bool[13];
+	int threatIndex = 0;
+
+
 	
 	// Update is called once per frame
 	void Update () {
