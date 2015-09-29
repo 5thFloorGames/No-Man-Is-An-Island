@@ -551,8 +551,10 @@ GameObject:
   - 223: {fileID: 166032370}
   - 114: {fileID: 166032369}
   - 114: {fileID: 166032368}
-  - 114: {fileID: 166032367}
   - 114: {fileID: 166032366}
+  - 114: {fileID: 166032367}
+  - 225: {fileID: 166032371}
+  - 114: {fileID: 166032372}
   m_Layer: 5
   m_Name: Intro
   m_TagString: Untagged
@@ -600,10 +602,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 166032364}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8991489a0bf594d51ab119b23d730a2b, type: 3}
+  m_Script: {fileID: 11500000, guid: 28bfabdf119b44a73a5d6964bcd0f115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
+  fadable: {fileID: 166032371}
+  fade: 0
+  SceneLogic: {fileID: 889368541}
 --- !u!114 &166032368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -658,6 +662,29 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 10000
+--- !u!225 &166032371
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166032364}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &166032372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 166032364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8991489a0bf594d51ab119b23d730a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
 --- !u!1 &181770831
 GameObject:
   m_ObjectHideFlags: 0
@@ -6399,8 +6426,8 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -171.5, y: 24.1000004}
-  m_SizeDelta: {x: 228, y: 78}
+  m_AnchoredPosition: {x: -64, y: -6}
+  m_SizeDelta: {x: 443, y: 138}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1465233961
 MonoBehaviour:
@@ -7324,19 +7351,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 889368541}
-        m_MethodName: Activate
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: nextUp
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 166032367}
-        m_MethodName: Toggle
+        m_MethodName: FadeOutAndShutDown
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7344,17 +7360,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 889368541}
-        m_MethodName: Activate
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: desk
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
