@@ -9,6 +9,7 @@ public class ResourcesScript : MonoBehaviour {
 	private int sanityLevel = 0;
 	private Threat threat;
 	public CanvasChanger CanvasChanger;
+	
 	string[] names = {
 		"a small civilian passenger ship", 
 		"an enemy scout", 
@@ -59,12 +60,22 @@ public class ResourcesScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		AddVessel ("a small civilian passenger ship", 1, 1, false);
+
+		threatIndex = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	private void AddVessel (string name, int radarValue, int weaponValue, bool enemy){
+		names[threatIndex] = name;
+		radarValues[threatIndex] = radarValue;
+		weaponValues[threatIndex] = weaponValue;
+		enemies [threatIndex] = enemy;
+		threatIndex++;
 	}
 
 	public void CreateThreat(){
