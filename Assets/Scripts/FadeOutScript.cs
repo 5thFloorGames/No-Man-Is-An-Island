@@ -1,0 +1,27 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class FadeOutScript : MonoBehaviour {
+
+	public CanvasGroup fadable;
+	public bool fade = false;
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		if (fade) {
+			fadable.alpha -= Time.deltaTime * 1;
+		}
+		if (fadable.alpha <= 0) {
+			this.gameObject.SetActive (false);
+		}
+	}
+
+	public void FadeOutAndShutDown(){
+		fade = true;
+	}
+}
