@@ -6028,6 +6028,11 @@ Prefab:
       propertyPath: m_Colors.m_HighlightedColor.b
       value: .176470593
       objectReference: {fileID: 0}
+    - target: {fileID: 11466566, guid: adc8e9f36dfbb4b02b7300baa4fb8789, type: 2}
+      propertyPath: m_Text
+      value: "I tried to dry this, but it still doesn\u2019t work.\n\nThere is an
+        inscription that was scratched away. \n\nStrange."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: adc8e9f36dfbb4b02b7300baa4fb8789, type: 2}
   m_IsPrefabParent: 0
