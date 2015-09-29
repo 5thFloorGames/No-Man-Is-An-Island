@@ -9,19 +9,21 @@ public class ResourcesScript : MonoBehaviour {
 	private int sanityLevel = 0;
 	private Threat threat;
 	public CanvasChanger CanvasChanger;
+
+
 	string[] names = {
-		"a small civilian passenger ship", 
-		"an enemy scout", 
+		"a small civilian passenger ship carrying supplies", 
+		"an enemy patrol vessel, used mainly for scouting", 
 		"a friendly container vessel carrying munitions",
-		"an enemy missile boat", 
-		"an octopus-like underwater enemy stealth drone", 
-		"an enemy class-5 corvette", 
-		"an enemy destroyer equipped with shame, guilt and regret", 
-		"a civilian schooner filled with hope", 
-		"a slithering sea serpent", 
-		"my father’s old wooden rowboat",
-		"a chthonian hydra", 
-		"something eldritch rising from the sea", 
+		"a light enemy missile boat",  
+		"an enemy class-5 corvette, used to support and protect heavier vessels",
+		"an octopus-like underwater enemy minesweeper",
+		"an enemy destroyer equipped with shame, guilt and regret",
+		"an enemy aircraft carrier equipped with several G50-fighters, and bombers carrying liquid hate", 
+		"a civilian schooner filled with hope",
+		"a mechanical, steam-operated hydra from the underworld", 
+		"my father’s old oaken rowboat",
+		"something eldritch rising from the bottom of the sea and washing the shores with blood of our ", 
 		"forgiveness", 
 	};	
 	int[] radarValues = {1,2,2,2,3,2,2,3,2,3,1,1,3};
