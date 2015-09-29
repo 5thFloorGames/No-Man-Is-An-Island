@@ -123,6 +123,7 @@ public class CanvasChanger : MonoBehaviour {
 			this.SendMessage ("increaseSanity");
 			NextUp();
 		} else if (action.Equals ("end")) {
+			desk.SendMessage("Toggle");
 			Activate("credits");
 		} else {
 			addEventToPhone(action);		
