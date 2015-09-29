@@ -64,8 +64,14 @@ public class DeskScript : MonoBehaviour {
 		int sanity = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ResourcesScript> ().getSanityLevel();
 		// Prevent indexoverflow!!!
 		for (int i = 0; i < sanity; i++) {
-			items[i].SetActive(true);
+			if (sanity >= 8 && i == 6) {
+				items[6].SetActive(false);
+			} else {
+				items[i].SetActive(true);
+			}
 		}
+
+
 	}
 
 	public void ActivateComputer(){
