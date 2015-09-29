@@ -24,8 +24,36 @@ public class ResourcesScript : MonoBehaviour {
 		"something eldritch rising from the sea", 
 		"forgiveness", 
 	};	
-	int[] radarValues = {1,2,2,2,3,2,2,3,2,3,1,1,3};
-	int[] weaponValues = {1,1,2,2,3, 3, 4, 1, 2, 1, 3, 4, 2};
+	int[] radarValues = {
+		1,
+		2,
+		2,
+		2,
+		3,
+		2,
+		2,
+		3,
+		2,
+		3,
+		1,
+		1,
+		3
+	};
+	int[] weaponValues = {
+		1,
+		1,
+		2,
+		2,
+		3,
+		3,
+		4,
+		1,
+		2,
+		1,
+		3,
+		4,
+		2
+	};
 	bool[] enemies = {false, true, false, true, true, true, true, false, true, false, true, true, false};
 	int threatIndex = 0;
 
