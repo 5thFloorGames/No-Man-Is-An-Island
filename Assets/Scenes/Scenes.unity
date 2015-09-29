@@ -7893,7 +7893,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: I'm sorry to inform that we received no knowledge on the vessel.
+  m_Text: I'm sorry Sir, with the amount of energy used we could not gain any additional
+    information on the vessel.
 --- !u!222 &1657884091
 CanvasRenderer:
   m_ObjectHideFlags: 0

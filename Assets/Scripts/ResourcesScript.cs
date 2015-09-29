@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 public class ResourcesScript : MonoBehaviour {
 
-	private int radars = 12;
-	private int weapons = 12;
+	private int radars = 10;
+	private int weapons = 10;
 	private int sanityLevel = 0;
 	private Threat threat;
 	public CanvasChanger CanvasChanger;
